@@ -1,0 +1,210 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role=list],
+ol[role=list] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  -webkit-text-decoration-skip: ink;
+          text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+*::before,
+*::after {
+    -webkit-animation-duration: 0.01ms !important;
+            animation-duration: 0.01ms !important;
+    -webkit-animation-iteration-count: 1 !important;
+            animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+:root {
+  --color-primary-soft-blue: hsl(215, 51%, 70%);
+  --color-primary-cyan: hsl(178, 100%, 50%);
+  --color-main-bg: hsl(217, 54%, 11%);
+  --color-card-bg: hsl(216, 50%, 16%);
+  --color-line: hsl(215, 32%, 27%);
+  --color-white: hsl(0, 0%, 100%);
+  --font300: 300;
+  --font400: 400;
+  --font600: 600;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 18px;
+  font-family: "Outfit", sans-serif;
+  background-color: var(--color-main-bg);
+  color: var(--color-white);
+  padding: 60px 25px;
+}
+
+.container {
+  background-color: var(--color-card-bg);
+  padding: 25px;
+  border-radius: 20px;
+  max-width: 325px;
+  margin: auto;
+}
+
+.pictures {
+  position: relative;
+  width: 100%;
+  height: 270px;
+}
+
+.hero {
+  border-radius: 10px;
+  position: absolute;
+  background-size: contain;
+  width: 100%;
+  height: auto;
+}
+
+.overlay {
+  opacity: 0;
+  position: relative;
+  border-radius: 10px;
+  width: 100%;
+  height: 275px;
+  background-color: hsla(178deg, 100%, 50%, 0.5);
+}
+.overlay img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+h1 {
+  font-size: 115%;
+  margin-top: 25px;
+}
+
+p {
+  color: var(--color-primary-soft-blue);
+  font-size: 90%;
+  font-weight: var(--font300);
+  margin-top: 10px;
+}
+
+.price-time,
+.price,
+.time {
+  display: flex;
+  align-items: center;
+}
+
+.price-time {
+  justify-content: space-between;
+  margin-top: 15px;
+  font-size: 90%;
+}
+.price-time img {
+  margin-right: 7px;
+}
+
+.price {
+  color: var(--color-primary-cyan);
+}
+
+.time {
+  color: var(--color-primary-soft-blue);
+}
+
+hr {
+  border: none;
+  border-top: 1px solid;
+  border-color: var(--color-line);
+  margin-top: 20px;
+}
+
+.creator {
+  display: flex;
+  align-items: center;
+  font-size: 90%;
+  font-weight: var(--font300);
+  margin-top: 20px;
+  color: var(--color-primary-soft-blue);
+}
+.creator img {
+  width: 35px;
+  border: 1px solid var(--color-white);
+  border-radius: 50%;
+  margin-right: 20px;
+}
+.creator em {
+  margin-left: 5px;
+  font-style: normal;
+  color: var(--color-white);
+}
+
+@media (min-width: 800px) {
+  .overlay:hover {
+    opacity: 80%;
+    cursor: pointer;
+  }
+  em:hover,
+h1:hover {
+    color: var(--color-primary-cyan);
+    cursor: pointer;
+  }
+}/*# sourceMappingURL=main.css.map */
